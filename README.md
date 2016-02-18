@@ -6,3 +6,5 @@ Jaga oma elu pisemaidki üksikasju veel detailsemalt, kui seda võimaldavad Face
 Stay tuned.
 
 Prototüüp on visioon mis peaks kujunema rakenduseks emotions. Ta ei väljenda seda milline hakkab välja nägema lõplik versioon tootest kuna ideed ja mõtted võivad arenduse käigus muutuda. Samuti ei ole seal toodud välimus kindlasti see mis jääb lõpuks alles.
+
+Interaktiivne prototüüp: https://marvelapp.com/25g622j
