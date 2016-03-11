@@ -14,16 +14,12 @@ body {
   color: #E6B0AA;
   background-color: #FFFFFF;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-left: -140px;
-  margin-top: -140px;
   width: 280px;
   height: 280px;
   border-radius: 50%; 
   text-align: center;
   font-family: 'Open Sans', sans-serif;
-  font-size: 35px;
+  font-size: 2em;
   line-height: 280px;
   -webkit-font-smoothing: antialiased;
   -webkit-box-shadow: 5px 5px 25px rgba(0,0,0,0.75);
@@ -34,79 +30,6 @@ body {
           transform-origin: center center;
 }
 
-/*
-  Make the shadow larger on hover.
-*/
-.hoja:hover {
-  -webkit-animation: hover-shadow 1s 0.2s linear forwards, hover-enlarge 4s -0.5s linear infinite;
-          animation: hover-shadow 1s 0.2s linear forwards, hover-enlarge 4s -0.5s linear infinite;
-}
-
-@-webkit-keyframes hover-shadow {
-  0% {    
-    -webkit-box-shadow: 5px 5px 25px rgba(0,0,0,0.75);
-    -moz-box-shadow: 5px 5px 25px rgba(0,0,0,0.75);
-    box-shadow: 5px 5px 25px rgba(0,0,0,0.75);
-  }
-  100% {
-    -webkit-box-shadow: 5px 5px 75px rgba(0,0,0,0.75);
-    -moz-box-shadow: 5px 5px 75px rgba(0,0,0,0.75);
-    box-shadow: 5px 5px 75px rgba(0,0,0,0.75);
-  }
-}
-@keyframes hover-shadow {
-  0% {    
-    -webkit-box-shadow: 5px 5px 25px rgba(0,0,0,0.75);
-    -moz-box-shadow: 5px 5px 25px rgba(0,0,0,0.75);
-    box-shadow: 5px 5px 25px rgba(0,0,0,0.75);
-  }
-  100% {
-    -webkit-box-shadow: 5px 5px 75px rgba(0,0,0,0.75);
-    -moz-box-shadow: 5px 5px 75px rgba(0,0,0,0.75);
-    box-shadow: 5px 5px 75px rgba(0,0,0,0.75);
-  }
-}
-
-@-webkit-keyframes hover-enlarge {
-  0% {
-    -webkit-transform: rotateZ(0deg) scaleX(1) scaleY(1);
-            transform: rotateZ(0deg) scaleX(1) scaleY(1);
-  }
-  50% {
-    -webkit-transform: rotateZ(180deg) scaleX(0.96) scaleY(0.99);
-            transform: rotateZ(180deg) scaleX(0.96) scaleY(0.99);
-  }
-  100% {
-    -webkit-transform: rotateZ(360deg) scaleX(1) scaleY(1);
-            transform: rotateZ(360deg) scaleX(1) scaleY(1);
-  }
-}
-@keyframes hover-enlarge {
-  0% {
-    -webkit-transform: rotateZ(0deg) scaleX(1) scaleY(1);
-            transform: rotateZ(0deg) scaleX(1) scaleY(1);
-  }
-  50% {
-    -webkit-transform: rotateZ(180deg) scaleX(0.96) scaleY(0.99);
-            transform: rotateZ(180deg) scaleX(0.96) scaleY(0.99);
-  }
-  100% {
-    -webkit-transform: rotateZ(360deg) scaleX(1) scaleY(1);
-            transform: rotateZ(360deg) scaleX(1) scaleY(1);
-  }
-}
-
-/*
-  Move the element to SE by 3px and make the shadow smaller.
-*/
-.hoja:active {
-  margin-left: -137px;
-  margin-top: -137px;
-  -webkit-box-shadow: 5px 5px 15px rgba(0,0,0,0.75);
-  -moz-box-shadow: 5px 5px 15px rgba(0,0,0,0.75);
-  box-shadow: 5px 5px 15px rgba(0,0,0,0.75);
-}
-
 .hoja:after {
   content: "";
   border-radius: 50%;
@@ -115,33 +38,112 @@ body {
   left: -2%;
   width: 104%;
   height: 104%;
-  -webkit-transform-origin: center center;
-          transform-origin: center center;
+}
+
+/*
+  Make the shadow larger on hover.
+*/
+.hoja:hover {
+  -webkit-animation: shadow-hover 1s 0.2s linear forwards, float-hover 4s linear infinite;
+          animation: shadow-hover 1s 0.2s linear forwards, float-hover 4s linear infinite;
 }
 
 .hoja:hover:after {  
-  -webkit-animation: rotar 4s -0.5s linear infinite, fade-in-selection 1s linear forwards;
-          animation: rotar 4s -0.5s linear infinite, fade-in-selection 1s linear forwards;
+  -webkit-animation: float-hover 4s linear infinite, fade-in-hover 1s -0.2s linear forwards;
+          animation: float-hover 4s linear infinite, fade-in-hover 1s -0.2s linear forwards;
 }
 
-@-webkit-keyframes fade-in-selection {
+/*
+  Make the shadow smaller on click.
+.hoja:active {
+  -webkit-animation: shadow-active 0.1s linear forwards;
+          animation: shadow-active 0.1s linear forwards;
+}
+*/
+
+/* 
+  Feel specific attributes. Template: .hoja#<id>.
+*/
+
+.hoja#love {
+  color: #E6B0AA;
+  background-color: #FFCDD2;
+  margin-left: 140px;
+  margin-top: 140px;
+}
+
+.hoja#happiness {
+  color: #E6B0AA;
+  background-color: #D6EAF8;
+  margin-left: 500px;
+  margin-top: 140px;  
+}
+
+.hoja#sadness {
+  color: #E6B0AA;
+  background-color: #AEB6BF;
+  margin-left: 860px;
+  margin-top: 140px;  
+}
+
+/*
+    Change rgba colors here to change the circle color. It consist of 4 colors. Add more rules when needed, template: .hoja#<id>:hover:after.   
+*/
+.hoja#love:hover:after {
+  box-shadow: inset 0 5px 0 rgba(245, 183, 177, 0.6), inset 5px 0 0 rgba(205, 97, 85, 0.6), inset 0 -5px 0 rgba(192, 57, 43, 0.6), inset -5px 0 0 rgba(146, 43, 33, 0.6);
+}
+.hoja#happiness:hover:after {
+  box-shadow: inset 0 5px 0 rgba(255, 0, 51, 0.6), inset 5px 0 0 rgba(255, 193, 7, 0.6), inset 0 -5px 0 rgba(205, 220, 57, 0.6), inset -5px 0 0 rgba(38, 198, 218, 0.6);
+}
+.hoja#sadness:hover:after {
+  box-shadow: inset 0 5px 0 rgba(179, 182, 183, 0.6), inset 5px 0 0 rgba(44, 62, 80, 0.6), inset 0 -5px 0 rgba(241, 196, 15, 0.6), inset -5px 0 0 rgba(20, 90, 50, 0.6);
+}
+
+@-webkit-keyframes fade-in-hover {
   0% {
-    box-shadow: inset 0 5px 0 rgba(245, 183, 177, 0.0), inset 5px 0 0 rgba(205, 97, 85, 0.0), inset 0 -5px 0 rgba(192, 57, 43, 0.0), inset -5px 0 0 rgba(146, 43, 33, 0.0);
-  }
+    opacity: 0;
+    }
   100% {
-    box-shadow: inset 0 5px 0 rgba(245, 183, 177, 0.6), inset 5px 0 0 rgba(205, 97, 85, 0.6), inset 0 -5px 0 rgba(192, 57, 43, 0.6), inset -5px 0 0 rgba(146, 43, 33, 0.6);
+    opacity: 1;
   }
 }
-@keyframes fade-in-selection {
+@keyframes fade-in-hover {
   0% {
-    box-shadow: inset 0 5px 0 rgba(245, 183, 177, 0.0), inset 5px 0 0 rgba(205, 97, 85, 0.0), inset 0 -5px 0 rgba(192, 57, 43, 0.0), inset -5px 0 0 rgba(146, 43, 33, 0.0);
-  }
+    opacity: 0;
+    }
   100% {
-    box-shadow: inset 0 5px 0 rgba(245, 183, 177, 0.6), inset 5px 0 0 rgba(205, 97, 85, 0.6), inset 0 -5px 0 rgba(192, 57, 43, 0.6), inset -5px 0 0 rgba(146, 43, 33, 0.6);
+    opacity: 1;
   }
 }
 
-@-webkit-keyframes rotar {
+
+@-webkit-keyframes shadow-hover {
+  0% {    
+    -webkit-box-shadow: 5px 5px 25px rgba(0,0,0,0.75);
+    -moz-box-shadow: 5px 5px 25px rgba(0,0,0,0.75);
+    box-shadow: 5px 5px 25px rgba(0,0,0,0.75);
+  }
+  100% {
+    -webkit-box-shadow: 0px 0px 50px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 50px 1px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 50px 1px rgba(0,0,0,0.75);
+  }
+}
+@keyframes shadow-hover {
+  0% {    
+    -webkit-box-shadow: 5px 5px 25px rgba(0,0,0,0.75);
+    -moz-box-shadow: 5px 5px 25px rgba(0,0,0,0.75);
+    box-shadow: 5px 5px 25px rgba(0,0,0,0.75);
+  }
+  100% {
+    -webkit-box-shadow: 0px 0px 50px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 50px 1px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 50px 1px rgba(0,0,0,0.75);
+  }
+}
+
+
+@-webkit-keyframes float-hover {
   0% {
     -webkit-transform: rotateZ(0deg) scaleX(1) scaleY(1);
             transform: rotateZ(0deg) scaleX(1) scaleY(1);
@@ -155,7 +157,7 @@ body {
             transform: rotateZ(360deg) scaleX(1) scaleY(1);
   }
 }
-@keyframes rotar {
+@keyframes float-hover {
   0% {
     -webkit-transform: rotateZ(0deg) scaleX(1) scaleY(1);
             transform: rotateZ(0deg) scaleX(1) scaleY(1);
@@ -167,5 +169,24 @@ body {
   100% {
     -webkit-transform: rotateZ(360deg) scaleX(1) scaleY(1);
             transform: rotateZ(360deg) scaleX(1) scaleY(1);
+  }
+}
+
+@-webkit-keyframes shadow-active {
+  0% {
+  }
+  100% {
+    -webkit-box-shadow: 5px 5px 15px rgba(0,0,0,0.75);
+    -moz-box-shadow: 5px 5px 15px rgba(0,0,0,0.75);
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.75);
+  }
+}
+@keyframes shadow-active {
+  0% {
+  }
+  100% {
+    -webkit-box-shadow: 5px 5px 15px rgba(0,0,0,0.75);
+    -moz-box-shadow: 5px 5px 15px rgba(0,0,0,0.75);
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.75);
   }
 }
