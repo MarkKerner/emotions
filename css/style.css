@@ -1,104 +1,247 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:700);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400|Great+Vibes|Lato:300|Gentium+Book+Basic);
 @import url("reset.css");
 
 html,
 body {
   height: 100%;
+  width: 100%;
 }
 body {
+  overflow: hidden;                    
+}
+
+#bg, #menu-bg {
+  background: #EFEFBB url(../images/apples.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  padding: 0px 0px 0px 1%; 
+}
+
+#menu-container {
+  position: relative;
+  top: 50%;
+  height: 250px;
+  width: 90px;
+
+  transform: translate(0%, -50%);
+}
+
+  #menu-bg {
+    /* Absolutely position it, but stretch it to all four corners, then put it just behind #search's z-index */
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    z-index: 99;
+    border-radius: 15px;
+
+    -webkit-filter: blur(10px); /* Chrome, Opera, etc. */
+    filter: url('blur.svg#blur'); /* Older FF and others - http://jordanhollinger.com/media/blur.svg */
+    filter: blur(10px); /* Firefox 35+, eventually all */
+  }
+
+  #menu {
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    position: absolute;
+    border-radius: 15px;
+    z-index: 100;
+    background: rgba(238, 238, 238);
+    background: rgba(238, 238, 238,0.2);
+  }
+
+#profile-content {
+  width: 100%;
+  height: 100%;
   overflow: hidden;
-  background-color: #34495E;
 }
 
-.hoja {
-  color: #E6B0AA;
-  background-color: #FFFFFF;
-  position: absolute;
-  width: 280px;
-  height: 280px;
-  border-radius: 50%; 
-  text-align: center;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 2em;
-  line-height: 280px;
-  -webkit-font-smoothing: antialiased;
-  -webkit-box-shadow: 5px 5px 25px rgba(0,0,0,0.75);
-  -moz-box-shadow: 5px 5px 25px rgba(0,0,0,0.75);
-  box-shadow: 5px 5px 25px rgba(0,0,0,0.75);
+  #profile-picture {
+    position: fixed;
+    background: #FFF;
+    background: transparent url(../images/profile-picture.jpg);
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
 
-  -webkit-transform-origin: center center;
-          transform-origin: center center;
-}
+    top: 50%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
 
-.hoja:after {
-  content: "";
-  border-radius: 50%;
-  position: absolute;
-  top: -2%;
-  left: -2%;
-  width: 104%;
-  height: 104%;
-}
+    -webkit-box-shadow: 5px 5px 25px rgba(0,0,0,0.75);
+    -moz-box-shadow: 5px 5px 25px rgba(0,0,0,0.75);
+    box-shadow: 5px 5px 25px rgba(0,0,0,0.75);
 
-/*
-  Make the shadow larger on hover.
-*/
-.hoja:hover {
-  -webkit-animation: shadow-hover 1s 0.2s linear forwards, float-hover 4s linear infinite;
-          animation: shadow-hover 1s 0.2s linear forwards, float-hover 4s linear infinite;
-}
+  }
+    #profile-picture:hover {
+      -webkit-animation: profile-shadow 1s linear forwards;
+              animation: profile-shadow 1s linear forwards;  
+    }
 
-.hoja:hover:after {  
-  -webkit-animation: float-hover 4s linear infinite, fade-in-hover 1s -0.2s linear forwards;
-          animation: float-hover 4s linear infinite, fade-in-hover 1s -0.2s linear forwards;
-}
+  .emotion-container {
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+  }
 
-/*
-  Make the shadow smaller on click.
-.hoja:active {
-  -webkit-animation: shadow-active 0.1s linear forwards;
-          animation: shadow-active 0.1s linear forwards;
-}
-*/
+  .emotion-container:hover .hoja  {
+    animation-play-state: running;
+    -webkit-animation: float-hover 4s linear infinite, shadow-hover 1s 0.2s linear forwards;
+            animation: float-hover 4s linear infinite, shadow-hover 1s 0.2s linear forwards;
+  }
+  .emotion-container:hover .hoja:after {  
+    -webkit-animation: float-hover 4s linear infinite, fade-in-hover 1s -0.2s linear forwards;
+            animation: float-hover 4s linear infinite, fade-in-hover 1s -0.2s linear forwards;
+  }
+  #love:hover .emotion-name {
+    transition: text-shadow 1s;
+    text-shadow: 3px 3px 10px #AF7AC5;
+  }
 
-/* 
-  Feel specific attributes. Template: .hoja#<id>.
-*/
+    .emotion-name {
+      position: absolute;
+      color: #839192;
+      width: 100%;
+      top: 10%;
+      text-align: center;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 1.2em;
+      -webkit-font-smoothing: antialiased;
 
-.hoja#love {
-  color: #E6B0AA;
-  background-color: #FFCDD2;
-  margin-left: 140px;
-  margin-top: 140px;
-}
+      -webkit-transition: text-shadow 0s;
+    }
 
-.hoja#happiness {
-  color: #E6B0AA;
-  background-color: #D6EAF8;
-  margin-left: 500px;
-  margin-top: 140px;  
-}
+    .hoja {
+      position: absolute;
+      border-radius: 50%;
+      width: 100%;
+      height: 100%;
+      background: #fff;
+      -webkit-box-shadow: 5px 5px 25px rgba(0,0,0,0.75);
+      -moz-box-shadow: 5px 5px 25px rgba(0,0,0,0.75);
+      box-shadow: 5px 5px 25px rgba(0,0,0,0.75);
+      animation-play-state: paused;
+    }
 
-.hoja#sadness {
-  color: #E6B0AA;
-  background-color: #AEB6BF;
-  margin-left: 860px;
-  margin-top: 140px;  
-}
+      .hoja:after {
+        content: "";
+        border-radius: 50%;
+        position: absolute;
+        top: -2%;
+        left: -2%;
+        width: 104%;
+        height: 104%;
+      }
 
-/*
-    Change rgba colors here to change the circle color. It consist of 4 colors. Add more rules when needed, template: .hoja#<id>:hover:after.   
-*/
-.hoja#love:hover:after {
-  box-shadow: inset 0 5px 0 rgba(245, 183, 177, 0.6), inset 5px 0 0 rgba(205, 97, 85, 0.6), inset 0 -5px 0 rgba(192, 57, 43, 0.6), inset -5px 0 0 rgba(146, 43, 33, 0.6);
-}
-.hoja#happiness:hover:after {
-  box-shadow: inset 0 5px 0 rgba(255, 0, 51, 0.6), inset 5px 0 0 rgba(255, 193, 7, 0.6), inset 0 -5px 0 rgba(205, 220, 57, 0.6), inset -5px 0 0 rgba(38, 198, 218, 0.6);
-}
-.hoja#sadness:hover:after {
-  box-shadow: inset 0 5px 0 rgba(179, 182, 183, 0.6), inset 5px 0 0 rgba(44, 62, 80, 0.6), inset 0 -5px 0 rgba(241, 196, 15, 0.6), inset -5px 0 0 rgba(20, 90, 50, 0.6);
-}
+      /* On click action */
+      .hoja:active {
+        -webkit-animation: shadow-active 0.1s linear forwards;
+                animation: shadow-active 0.1s linear forwards;
+      }
 
+        #love {
+          left: 30%;
+          top: 60%;
+        }
+          #love .emotion-name {
+            color: #AEE0E5;
+            font-size: 3em;
+            font-family: 'Great Vibes', sans-serif;
+          }
+          #love .hoja {
+          }
+
+        #happiness {
+          left: 25%;
+          top: 18%;
+        }
+          #happiness .hoja {
+          }
+          #happiness .emotion-name {
+            color: #AEE0E5;
+            font-size: 1.5em;
+            font-family: 'Lato', sans-serif;
+            text-transform: uppercase;
+          }
+
+        #anger {
+          left: 40%;
+          top: 0%;
+        }
+          #anger .hoja {
+          }
+          #anger .emotion-name {
+            color: #AEE0E5;
+            font-size: 1.5em;
+            font-family: 'Lato', sans-serif;
+            text-transform: uppercase;
+          }
+
+        #satisfaction {  
+            left: 55%;
+            top: 18%;
+        }
+
+          #satisfaction .hoja {
+          }
+          #satisfaction .emotion-name {
+            color: #AEE0E5;
+            font-size: 1.5em;
+            font-family: 'Gentium Book Basic', sans-serif;
+            text-transform: uppercase;
+          }
+
+        #sadness {  
+            left: 50%;
+            top: 60%;
+        }
+
+          #sadness .hoja {
+          }
+          #sadness .emotion-name {
+            color: #AEE0E5;
+            font-size: 1.5em;
+            font-family: 'Gentium Book Basic', sans-serif;
+            text-transform: uppercase;
+          }      
+
+          /*
+              Change rgba colors here to change the circle color. It consist of 4 colors. Add more rules when needed, template: .hoja#<id>:hover:after.   
+          */
+        #love:hover .hoja:after {
+          box-shadow: inset 0 5px 0 rgba(245, 183, 177, 0.6), inset 5px 0 0 rgba(205, 97, 85, 0.6), inset 0 -5px 0 rgba(192, 57, 43, 0.6), inset -5px 0 0 rgba(146, 43, 33, 0.6);
+        }
+
+        #happiness:hover .hoja:after {
+          box-shadow: inset 0 5px 0 rgba(255, 0, 51, 0.6), inset 5px 0 0 rgba(255, 193, 7, 0.6), inset 0 -5px 0 rgba(205, 220, 57, 0.6), inset -5px 0 0 rgba(38, 198, 218, 0.6);
+        }
+
+        #anger:hover .hoja:after {
+          box-shadow: inset 0 5px 0 rgba(244, 67, 54, 0.6), inset 5px 0 0 rgba(23, 32, 42, 0.6), inset 0 -5px 0 rgba(241, 196, 15, 0.6), inset -5px 0 0 rgba(20, 90, 50, 0.6);
+        }
+
+        #satisfaction:hover .hoja:after {
+          box-shadow: inset 0 5px 0 rgba(125, 60, 152, 0.6), inset 5px 0 0 rgba(91, 44, 111, 0.6), inset 0 -5px 0 rgba(46, 204, 113, 0.6), inset -5px 0 0 rgba(20, 90, 50, 0.6);
+        }
+
+        #sadness:hover .hoja:after {
+          box-shadow: inset 0 5px 0 rgba(39, 55, 70, 0.6), inset 5px 0 0 rgba(44, 62, 80, 0.6), inset 0 -5px 0 rgba(241, 196, 15, 0.6), inset -5px 0 0 rgba(20, 90, 50, 0.6);
+        }
+
+
+
+/* Animations */
 @-webkit-keyframes fade-in-hover {
   0% {
     opacity: 0;
@@ -142,6 +285,31 @@ body {
   }
 }
 
+@-webkit-keyframes profile-shadow {
+  0% {    
+    -webkit-box-shadow: 5px 5px 25px rgba(0,0,0,0.75);
+    -moz-box-shadow: 5px 5px 25px rgba(0,0,0,0.75);
+    box-shadow: 5px 5px 25px rgba(0,0,0,0.75);
+  }
+  100% {  
+    -webkit-box-shadow: 0px 0px 50px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 50px 1px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 50px 1px rgba(0,0,0,0.75);
+  }
+}
+@keyframes profile-shadow {
+  0% {    
+    -webkit-box-shadow: 5px 5px 25px rgba(0,0,0,0.75);
+    -moz-box-shadow: 5px 5px 25px rgba(0,0,0,0.75);
+    box-shadow: 5px 5px 25px rgba(0,0,0,0.75);
+  }
+  100% {  
+    -webkit-box-shadow: 0px 0px 50px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 50px 1px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 50px 1px rgba(0,0,0,0.75);
+  }
+}
+
 
 @-webkit-keyframes float-hover {
   0% {
@@ -172,6 +340,65 @@ body {
   }
 }
 
+@-webkit-keyframes text-float-hover {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+
+  30% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
+
+  40% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+
+  50% {
+    transform: scale3d(1.15, 0.85, 1);
+  }
+
+  65% {
+    transform: scale3d(.95, 1.05, 1);
+  }
+
+  75% {
+    transform: scale3d(1.05, .95, 1);
+  }
+
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
+}
+@keyframes text-float-hover {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+
+  30% {
+    transform: scale3d(1.25, 0.75, 1);
+  }
+
+  40% {
+    transform: scale3d(0.75, 1.25, 1);
+  }
+
+  50% {
+    transform: scale3d(1.15, 0.85, 1);
+  }
+
+  65% {
+    transform: scale3d(.95, 1.05, 1);
+  }
+
+  75% {
+    transform: scale3d(1.05, .95, 1);
+  }
+
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
 @-webkit-keyframes shadow-active {
   0% {
   }
@@ -189,4 +416,16 @@ body {
     -moz-box-shadow: 5px 5px 15px rgba(0,0,0,0.75);
     box-shadow: 5px 5px 15px rgba(0,0,0,0.75);
   }
+}
+
+/* Utility classes */
+/* Disable selection (for text) */
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* IE/Edge */
+  user-select: none;           /* non-prefixed version, currently
+                                  not supported by any browser */
 }

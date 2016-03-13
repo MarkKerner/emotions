@@ -5,14 +5,41 @@
 	    <title>Double ring</title>   
 	 	<link rel="stylesheet" href="css/style.css">   
   	</head>
-	<body>
+	<body id="bg">
+		<div id="menu-container">
+			<div id="menu-bg"></div>
+			<div id="menu"></div>
+		</div>
 
-<!-- 
-autor: Marco Barría 
-https://twitter.com/marco_bf
--->
-		<div class="hoja" id="love"></div>
-		<div class="hoja" id="happiness"></div>
-		<div class="hoja" id="sadness"></div>
+		<div id="profile-content">
+			<div id="profile-picture"></div>
+
+			<div id="love" class="emotion-container">
+				<div class="hoja"></div>
+				<div class="emotion-name noselect">love</div>
+			</div>
+
+			<div id="happiness" class="emotion-container">
+				<div class="hoja"></div>
+				<div class="emotion-name">happiness</div>
+			</div>
+
+			<div id="anger" class="emotion-container">
+				<div class="hoja"></div>
+				<div class="emotion-name">anger</div>
+			</div>
+
+			<div id="satisfaction" class="emotion-container">
+				<div class="hoja"></div>
+				<div class="emotion-name">satisfaction</div>
+			</div>
+
+			<div id="sadness" class="emotion-container">
+				<div class="hoja"></div>
+				<div class="emotion-name">sadness</div>
+			</div>
+		</div>
+
+	<script src="js/background-color-toggle.js"></script>
   	</body>
 </html>
