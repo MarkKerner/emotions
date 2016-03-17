@@ -1,0 +1,12 @@
+- Veebirakenduse avades kuvatakse sisselogimise vaade
+- Sisselogimise õnnestumisel suunatakse kasutaja tema profiili lehele
+- Sisselogimise vaatest on võimalik liikuda registreerimise vaatesse ja sealt tagasi
+- Registreerumise õnnestumisel suunatakse kasutaja tema profiili lehele
+ Igal lehel peale sisselogimist kuvatakse menüü, kust on võimalik minna uudiste, profiili või seadete vaatesse
+- Profiili vaates on võimalik vaadata enda varasemaid emotsioone, ja grupeerida neid vastavalt emotsioonile või vaadata kõiki varasemaid korraga
+- Profiili vaates on võimalik lisada emotsioon, valides selleks vastava emotsiooni tüübi, millel järel avaneb kaks võimalust, kas lisada privaatne või avalik emotsioon.
+- Kasutaja saab enda emotsioone alati vahetada avaliku ja privaatse vahel
+- Emotsioonina on võimalik lisada pilt, video, helifail, tekst või URL, mis võib viidata ükskõik millele.
+- Uudiste vaates on võimalik näha teiste kasutajate avalikke emotsioone
+- Teiste kasutajate avalikke emotsioone on võimalik lisada endale sobiva emotsiooni alla
+- Seadete vaates on võimalik muuta enda nime, kasutajanime, salasõna
