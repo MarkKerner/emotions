@@ -4,7 +4,7 @@ html, body {
     overflow: hidden;
 }
 #bg {
-    background: url(apples.jpg);
+    background: url(../images/apples.jpg);
     background-repeat:no-repeat;
     background-position: center;
     background-size: cover;
