@@ -34,9 +34,6 @@ button[type="button"] {
     font-family: 'Century Gothic';
     font-size: 25pt;
     background-color: ;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
@@ -79,9 +76,6 @@ button[type="button"]:hover, button[type="button"]:focus  {
 input[type="text"] {
     font-family: 'Century Gothic';
     font-size: 18pt;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
@@ -94,9 +88,6 @@ input[type="text"] {
 }
 input[type="text"]:focus  {
     outline: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
     -webkit-box-shadow: 0 0 10px 3px #cc7a00;
     -moz-box-shadow: 0 0 10px 3px #cc7a00;
     box-shadow: 0 0 10px 3px #cc7a00;
