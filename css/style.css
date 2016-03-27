@@ -76,7 +76,7 @@ body {
     border-radius: 50%;
 
     background: #FFF;
-    background: transparent url(../images/profile-picture.jpg);
+    background: transparent url(../images/profilepics/default.jpg);
     overflow: hidden;
     background-size: cover;
     background-position: center;

@@ -1,4 +1,9 @@
 <!DOCTYPE html>
+<?php
+require_once("classes/connect.php");
+$conn = establish();
+
+?>
 <html >
   	<head>
 	    <meta charset="UTF-8">
@@ -43,3 +48,6 @@
 	<script src="js/background-color-toggle.js"></script>
   	</body>
 </html>
+<?php
+mysqli_close($conn);
+?>
