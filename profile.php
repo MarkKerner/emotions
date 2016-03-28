@@ -1,10 +1,10 @@
 <?php
-require_once("classes/connect.php");
+require_once("backend/connect.php");
 $conn = establish();
 ?>
 
 <?php
-require_once("classes/users.php");
+require_once("backend/users.php");
 /*
  * Scripts regarding profile
  * This is a placeholder

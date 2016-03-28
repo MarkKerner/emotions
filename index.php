@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?php
-require_once("classes/connect.php");
+require_once("backend/connect.php");
 $conn = establish();
 
 ?>
