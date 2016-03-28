@@ -6,5 +6,3 @@ define('DB_PASSWORD', '66eb6582');
 define('DB_USER', 'b522955fda4efc');
 if ( !defined('ROOTPATH') )
     define('ROOTPATH', dirname(__FILE__) . '/');
-
-?>
