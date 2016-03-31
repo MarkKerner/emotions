@@ -52,8 +52,8 @@ body {
     position: absolute;
     border-radius: 15px;
     z-index: 100;
-    background: rgba(238, 238, 238);
-    background: rgba(238, 238, 238,0.2);
+    background: rgb(238, 238, 238);
+    background: rgba(238, 238, 238, 0.2);
   }
 
 #profile-container {
@@ -75,7 +75,7 @@ body {
     border-radius: 50%;
 
     background: #FFF;
-    background: transparent url(../images/profile-picture.jpg);
+    background: transparent url(../images/profilepics/default.jpg);
     overflow: hidden;
     background-size: cover;
     background-position: center;
@@ -432,14 +432,4 @@ body {
   }
 }
 
-/* Utility classes */
-/* Disable selection (for text) */
-.noselect {
-  -webkit-touch-callout: none; /* iOS Safari */
-  -webkit-user-select: none;   /* Chrome/Safari/Opera */
-  -khtml-user-select: none;    /* Konqueror */
-  -moz-user-select: none;      /* Firefox */
-  -ms-user-select: none;       /* IE/Edge */
-  user-select: none;           /* non-prefixed version, currently
-                                  not supported by any browser */
-}
+/* Utility backend */
