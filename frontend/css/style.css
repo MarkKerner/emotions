@@ -170,17 +170,17 @@ body {
 
         #love {
         }
+          #love .hoja {
+          }
+
           #love .emotion-name {
             color: #AEE0E5;
             font-size: 3em;
             font-family: 'Great Vibes', sans-serif;
           }
-          #love .hoja {
-          }
-
           #love:hover .emotion-name {
             transition: text-shadow 1s;
-            text-shadow: 3px 3px 10px #AF7AC5;
+            text-shadow: 1px 1px 20px #AF7AC5;
           }
 
 
@@ -194,6 +194,10 @@ body {
             font-family: 'Lato', sans-serif;
             text-transform: uppercase;
           }
+          #happiness:hover .emotion-name {
+            transition: text-shadow 1s;
+            text-shadow: 1px 1px 20px #AF7AC5;
+          }
 
         #anger {
         }
@@ -204,6 +208,11 @@ body {
             font-size: 1.5em;
             font-family: 'Lato', sans-serif;
             text-transform: uppercase;
+          }
+
+          #anger:hover .emotion-name {
+            transition: text-shadow 1s;
+            text-shadow: 1px 1px 20px #AF7AC5;
           }
 
         #satisfaction {
@@ -218,6 +227,11 @@ body {
             text-transform: uppercase;
           }
 
+          #satisfaction:hover .emotion-name {
+            transition: text-shadow 1s;
+            text-shadow: 1px 1px 20px #AF7AC5;
+          }
+
         #sadness {
         }
 
@@ -228,7 +242,12 @@ body {
             font-size: 1.4em;
             font-family: 'Gentium Book Basic', sans-serif;
             text-transform: uppercase;
-          }      
+          }
+
+          #sadness:hover .emotion-name {
+            transition: text-shadow 1s;
+            text-shadow: 1px 1px 20px #AF7AC5;
+          }     
 
           /*
               Change rgba colors here to change the circle color. It consist of 4 colors. Add more rules when needed, template: .hoja#<id>:hover:after.   
