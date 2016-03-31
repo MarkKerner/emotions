@@ -5,6 +5,8 @@ html,
 body {
   height: 100%;
   width: 100%;
+  -webkit-font-smoothing: antialiased !important;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
 }
 body {
   overflow: hidden;                    
@@ -58,9 +60,6 @@ body {
   position: absolute;
   width: 28em;
   height: 28em;
-  padding: 2.8em;
-  /*2.8em = 2em*1.4 (2em = half the width of a link with img, 1.4 = sqrt(2))*/
-  border: dashed 1px;
   border-radius: 50%;
   top: 50%;
   left: 50%;
@@ -84,7 +83,7 @@ body {
     top: 50%;
     left: 50%;
     /* bring your own prefixes */
-    transform: translate(-50%, -50%);
+    transform: translate(-46%, -50%);
 
     -webkit-box-shadow: 5px 5px 25px rgba(0,0,0,0.75);
     -moz-box-shadow: 5px 5px 25px rgba(0,0,0,0.75);
@@ -97,7 +96,6 @@ body {
     }
 
   .emotion-container {
-    display: block;
     position: absolute;
     top: 50%; left: 50%;
     width: 15em; height: 15em;
@@ -118,13 +116,23 @@ body {
     .emotion-name {
       position: absolute;
       color: #839192;
-      width: 100%;
+
       top: 10%;
+      left: 50%;
+      transform: translate(-50%, 0%);
+
       text-align: center;
       font-family: 'Open Sans', sans-serif;
       font-size: 1.2em;
-      -webkit-font-smoothing: antialiased;
       -webkit-transition: text-shadow 0s;
+
+      -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none;   /* Chrome/Safari/Opera */
+      -khtml-user-select: none;    /* Konqueror */
+      -moz-user-select: none;      /* Firefox */
+      -ms-user-select: none;       /* IE/Edge */
+      user-select: none;           /* non-prefixed version, currently
+                                  not supported by any browser */
     }
 
     .hoja {
@@ -171,7 +179,10 @@ body {
           }
 
           #love:hover .emotion-name {
+            transition: text-shadow 1s;
+            text-shadow: 3px 3px 10px #AF7AC5;
           }
+
 
         #happiness {
         }
@@ -179,7 +190,7 @@ body {
           }
           #happiness .emotion-name {
             color: #AEE0E5;
-            font-size: 1.4em;
+            font-size: 1.3em;
             font-family: 'Lato', sans-serif;
             text-transform: uppercase;
           }
@@ -202,7 +213,7 @@ body {
           }
           #satisfaction .emotion-name {
             color: #AEE0E5;
-            font-size: 1.5em;
+            font-size: 1.2em;
             font-family: 'Gentium Book Basic', sans-serif;
             text-transform: uppercase;
           }
@@ -214,7 +225,7 @@ body {
           }
           #sadness .emotion-name {
             color: #AEE0E5;
-            font-size: 1.5em;
+            font-size: 1.4em;
             font-family: 'Gentium Book Basic', sans-serif;
             text-transform: uppercase;
           }      
