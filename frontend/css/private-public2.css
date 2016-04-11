@@ -50,7 +50,7 @@ html, body {
     position: absolute;
     top:32%;
     right:19%;
-    background: url(Metrize_Icons/Metrize_Icons/SVG/landscape.svg) no-repeat;
+    background: url(../Metrize_Icons/Metrize_Icons/SVG/landscape.svg) no-repeat;
     background-size: contain;
     border-radius: 50%;
     animation-fill-mode: forwards;
@@ -70,7 +70,7 @@ html, body {
     position: absolute;
     top:32%;
     right: 19%;
-    background: url(Metrize_Icons/Metrize_Icons/SVG/music.svg) no-repeat;
+    background: url(../Metrize_Icons/Metrize_Icons/SVG/music.svg) no-repeat;
     background-size: contain;
     border-radius: 50%;
     animation-fill-mode: forwards;
@@ -79,7 +79,7 @@ html, body {
     position: absolute;
     top:32%;
     right: 19%;
-    background: url(Metrize_Icons/Metrize_Icons/SVG/report-comment.svg) no-repeat;
+    background: url(../Metrize_Icons/Metrize_Icons/SVG/report-comment.svg) no-repeat;
     background-size: contain;
     border-radius: 50%;
     animation-fill-mode: forwards;
@@ -88,7 +88,7 @@ html, body {
     position: absolute;
     top:32%;
     right:19%;
-    background: url(Metrize_Icons/Metrize_Icons/SVG/link-url.svg) no-repeat;
+    background: url(../Metrize_Icons/Metrize_Icons/SVG/link-url.svg) no-repeat;
     background-size: contain;
     border-radius: 50%;
     animation-fill-mode: forwards;
