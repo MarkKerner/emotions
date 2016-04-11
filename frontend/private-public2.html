@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	    <meta charset="UTF-8">
+	    <title>Emotions</title>   
+	 	<link rel="stylesheet" href="css/private-public2.css">
+  	</head>
+    
+    <body id="bg">
+        <div id="menu-container">
+            <div id="menu-bg"></div>
+            <div id="menu"></div>
+        </div>
+        
+        <div id="publiccontent">
+            <div class="public">
+                <div id="header1">
+                    <p>public</p>
+                </div>
+            </div>
+            <button type="button" id="photo"></button>
+            <button type="button" id="video"></button>
+            <button type="button" id="text"></button>
+            <button type="button" id="music"></button>
+            <button type="button" id="url"></button>
+            <button id="addbutton1" title="Add new feeling" onclick="showElem()" type="button">+</button>
+        </div>
+        <div id="privatecontent">
+            <div class="private">
+                <div id="header2">
+                    <p>private</p>
+                </div>
+            </div>
+            <button id="addbutton2" title="Add new feeling" type="button">+</button>
+        </div>
+        
+        <script>
+        function showElem() {
+            document.getElementById("photo").className = "animation1";
+            document.getElementById("video").className = "animation2";
+            document.getElementById("text").className = "animation3";
+            document.getElementById("music").className = "animation4";
+            document.getElementById("url").className = "animation5";
+            
+        
+        }
+        </script>
+    </body>
+</html>
+

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	    <meta charset="UTF-8">
+	    <title>Emotions</title>   
+	 	<link rel="stylesheet" href="css/public_private.css">
+  	</head>
+    
+    <body id="bg">
+        <div id="menu-container">
+            <div id="menu-bg"></div>
+            <div id="menu"></div>
+        </div>
+        
+        <div id="publiccontent">
+            <div class="public">
+                <div id="header1">
+                    <p>public</p>
+                </div>
+            </div>
+            <div id="content-menu" style="visibility:hidden">
+                <div id="button-container">
+                    <button type="button" id="photo" title="Add new photo"></button>
+                    <button type="button" id="video" title="Add new video"></button>
+                    <button type="button" id="music" title="Add new song"></button>
+                    <button type="button" id="text" title="Add new text"></button>
+                    <button type="button" id="url" title="Add new link"></button>
+                </div>
+            </div>
+            <button id="addbutton1" title="Add new feeling" onclick="showElem()" type="button">+</button>
+        </div>
+        <div id="privatecontent">
+            <div class="private">
+                <div id="header2">
+                    <p>private</p>
+                </div>
+            </div>
+            <button id="addbutton2" title="Add new feeling" type="button">+</button>
+        </div>
+        
+        <script>
+        function showElem() {
+            
+            if (document.getElementById("content-menu").style.visibility = "hidden") {
+                document.getElementById("content-menu").style.visibility = "visible";
+            }
+            else {
+                document.getElementById("content-menu").style.visibility = "hidden";
+            } 
+        
+        }
+        </script>
+    </body>
+</html>
+
