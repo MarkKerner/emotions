@@ -1,0 +1,29 @@
+
+#bg {
+  background: #EFEFBB url(../../images/apples.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#menu-container {
+position: absolute;
+top: 50%;
+height: 15em;
+width: 5em;
+margin-left: 0.5em;
+
+transform: translate(0%, -50%);
+}
+
+#menu {
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  position: absolute;
+  border-radius: 15px;
+  z-index: 100;
+  background: rgb(238, 238, 238);
+  background: rgba(238, 238, 238, 1);
+}
