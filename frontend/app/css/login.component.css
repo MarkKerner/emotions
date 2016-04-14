@@ -1,17 +1,6 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400|Great+Vibes|Lato:400|Gentium+Book+Basic);
 @import url("reset.css");
 
-html, body {
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-}
-#bg {
-    background: url(../images/apples.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
 #content {
     position: fixed;
     top: 50%;

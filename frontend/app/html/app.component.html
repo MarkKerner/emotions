@@ -1,6 +1,11 @@
 <div id="bg">
 	<div id="menu-container">
-		<div id="menu"></div>
+		<div id="menu">
+			<nav>
+				<a [routerLink]="['Profile']">Profile</a>
+				<a [routerLink]="['Login']">Login</a>
+			</nav>
+		</div>
 	</div>
-	<profile-component></profile-component>
+	<router-outlet></router-outlet>
 </div>
