@@ -1,0 +1,11 @@
+<div id="content">
+  <div id="welcome">
+    <p>We're glad you're back!</p>
+  </div>
+  <form id="fields" (submit)="login($event, username.value, password.value)">
+    <input id="username" #username type="text" required id="username" placeholder="Username">
+    <input id="password" #password type="password" required id="passw" placeholder="Password">
+    <button id="btn-login" type="submit">Login</button>
+    <a href="/signup">Click here to Signup</a>
+  </form>
+</div>
