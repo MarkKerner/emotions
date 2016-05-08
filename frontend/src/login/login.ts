@@ -7,6 +7,7 @@ import {contentHeaders} from '../common/headers';
 let styles = require('./login.css');
 let template = require('./login.html');
 
+
 @Component({
   selector: 'login',
   directives: [RouterLink, CORE_DIRECTIVES, FORM_DIRECTIVES],

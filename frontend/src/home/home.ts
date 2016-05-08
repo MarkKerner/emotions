@@ -2,17 +2,21 @@ import {Component, View} from 'angular2/core';
 import {CORE_DIRECTIVES} from 'angular2/common';
 import {Http, Headers} from 'angular2/http';
 import {AuthHttp} from 'angular2-jwt';
-import {Router} from 'angular2/router';
+import {Router, RouteConfig, ROUTER_DIRECTIVES} from 'angular2/router';
+
+import {Profile} from '../profile/profile';
 
 let styles = require('./home.css');
 let template = require('./home.html');
 
 
+@RouteConfig([
+  {path: '/profile', component: Profile, name: 'Profile', useAsDefault: true}
+])
+
 @Component({
-  selector: 'home'
-})
-@View({
-  directives: [CORE_DIRECTIVES],
+  selector: 'home',
+  directives: [CORE_DIRECTIVES, ROUTER_DIRECTIVES],
   template: template,
   styles: [styles]
 })

@@ -1,0 +1,49 @@
+<div id="profile-container">
+  <div id="profile-picture"></div>
+  <div id="love" class="emotion-container first-emotion">
+    <div class="hoja"></div>
+    <div class="emotion-name">love</div>
+  </div>
+
+  <div id="happiness" class="emotion-container second-emotion">
+    <div class="hoja"></div>
+    <div class="emotion-name">happiness</div>
+  </div>
+
+  <div id="anger" class="emotion-container third-emotion">
+    <div class="hoja"></div>
+    <div class="emotion-name">anger</div>
+  </div>
+
+  <div id="satisfaction" class="emotion-container fourth-emotion">
+    <div class="hoja"></div>
+    <div class="emotion-name">satisfaction</div>
+  </div>
+
+  <div id="sadness" class="emotion-container fifth-emotion">
+    <div class="hoja"></div>
+    <div class="emotion-name">sadness</div>
+  </div>
+
+  <div *ngFor=""
+</div>
+
+<!--	<h2>My Heroes</h2>
+<ul class="heroes">
+  <li *ngFor="#hero of heroes"
+      [class.selected]="hero === selectedHero"
+      (click)="onSelect(hero)">
+    <span class="badge">{{hero.id}}</span> {{hero.name}}
+  </li>
+</ul>
+<div *ngIf="selectedHero">
+  <h2>
+    {{selectedHero.name | uppercase}} is my hero
+  </h2>
+  <button (click)="gotoDetail()">View Details</button>
+</div>-->
+
+<div *ngIf="selectedEmotion" id="emotion-selected-container">
+  <div class="selected-emotion-hoja" id="public"></div>
+  <div class="selected-emotion-hoja" id="private"></div>
+</div>

@@ -8,20 +8,18 @@ import {Signup} from '../signup/signup';
 
 let template = require('./app.html');
 
-@Component({
-  selector: 'auth-app'
-})
-@View({
-  template: template,
-  directives: [ LoggedInRouterOutlet ]
-})
 @RouteConfig([
   { path: '/', redirectTo: ['/Home'] },
-  { path: '/home', component: Home, as: 'Home' },
+  { path: '/home/...', component: Home, as: 'Home' },
   { path: '/login', component: Login, as: 'Login' },
   { path: '/signup', component: Signup, as: 'Signup' }
 ])
 
+@Component({
+  selector: 'feel-app',
+  template: template,
+  directives: [ LoggedInRouterOutlet ]
+})
 export class App {
   constructor(public router: Router) {
   }

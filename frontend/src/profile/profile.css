@@ -1,0 +1,285 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400|Great+Vibes|Lato:300|Gentium+Book+Basic);
+
+#emotion-selected-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.selected-emotion-hoja {
+  position: fixed;
+  top: 50%;
+  width: 40em;
+  height: 40em;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.8);
+  -webkit-box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.75);
+  box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.75);
+  transform: translate(-50%, -50%);
+
+}
+
+.selected-emotion-container#private {
+  left: 30%;
+}
+
+.selected-emotion-container#public {
+  left: 70%;
+}
+
+#profile-container {
+  position: fixed;
+  width: 28em;
+  height: 28em;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -48%);
+}
+
+#profile-picture {
+  cursor: pointer;
+  position: absolute;
+
+  width: 8em;
+  height: 8em;
+  border-radius: 50%;
+
+  background-color: rgba(255, 255, 255, 0.3);
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-46%, -50%);
+
+  -webkit-box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.75);
+  box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.75);
+
+}
+
+#profile-picture:hover {
+  -webkit-animation: profile-shadow 1s linear forwards;
+  animation: profile-shadow 1s linear forwards;
+}
+
+.emotion-container {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 15em;
+  height: 15em;
+  border-radius: 50%;
+  margin: -7.5em;
+}
+
+.emotion-name {
+  position: absolute;
+
+  color: #777;
+  font-size: 2.5em;
+  font-family: 'Great Vibes', sans-serif;
+
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+
+  text-align: center;
+
+  -webkit-font-smoothing: antialiased;
+
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Chrome/Safari/Opera */
+  -khtml-user-select: none; /* Konqueror */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE/Edge */
+  user-select: none;
+  /* non-prefixed version, currently
+                         not supported by any browser */
+}
+
+.hoja {
+  position: absolute;
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+
+  background: rgba(255, 255, 255, 0.97);
+
+  -webkit-box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.75);
+  box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.75);
+
+  animation-play-state: paused;
+}
+
+.emotion-container:hover .hoja {
+  animation-play-state: running;
+  -webkit-animation: float-hover 4s linear infinite, shadow-hover 1s 0.2s linear forwards;
+  animation: float-hover 4s linear infinite, shadow-hover 1s 0.2s linear forwards;
+}
+
+.hoja:after {
+  content: "";
+  border-radius: 50%;
+  position: absolute;
+  top: -2%;
+  left: -2%;
+  width: 104%;
+  height: 104%;
+}
+
+/*deg207*/
+.first-emotion {
+  transform: rotate(207deg) translate(14em) rotate(-207deg);
+}
+
+/*deg279*/
+.second-emotion {
+  transform: rotate(279deg) translate(14em) rotate(-279deg);
+}
+
+/*deg351*/
+.third-emotion {
+  transform: rotate(351deg) translate(14em) rotate(-351deg);
+}
+
+/*deg63*/
+.fourth-emotion {
+  transform: rotate(63deg) translate(14em) rotate(-63deg);
+}
+
+/*deg135*/
+.fifth-emotion {
+  transform: rotate(135deg) translate(14em) rotate(-135deg);
+}
+
+/*
+    Change rgba colors here to change the circle color. It consist of 4 colors. Add more rules when needed, template: .hoja#<id>:hover:after.
+*/
+#love:hover .hoja:after {
+  box-shadow: inset 0 5px 0 rgba(245, 183, 177, 0.6), inset 5px 0 0 rgba(205, 97, 85, 0.6), inset 0 -5px 0 rgba(192, 57, 43, 0.6), inset -5px 0 0 rgba(146, 43, 33, 0.6);
+}
+
+#happiness:hover .hoja:after {
+  box-shadow: inset 0 5px 0 rgba(255, 0, 51, 0.6), inset 5px 0 0 rgba(255, 193, 7, 0.6), inset 0 -5px 0 rgba(205, 220, 57, 0.6), inset -5px 0 0 rgba(38, 198, 218, 0.6);
+}
+
+#anger:hover .hoja:after {
+  box-shadow: inset 0 5px 0 rgba(244, 67, 54, 0.6), inset 5px 0 0 rgba(23, 32, 42, 0.6), inset 0 -5px 0 rgba(241, 196, 15, 0.6), inset -5px 0 0 rgba(20, 90, 50, 0.6);
+}
+
+#satisfaction:hover .hoja:after {
+  box-shadow: inset 0 5px 0 rgba(125, 60, 152, 0.6), inset 5px 0 0 rgba(91, 44, 111, 0.6), inset 0 -5px 0 rgba(46, 204, 113, 0.6), inset -5px 0 0 rgba(20, 90, 50, 0.6);
+}
+
+#sadness:hover .hoja:after {
+  box-shadow: inset 0 5px 0 rgba(39, 55, 70, 0.6), inset 5px 0 0 rgba(44, 62, 80, 0.6), inset 0 -5px 0 rgba(241, 196, 15, 0.6), inset -5px 0 0 rgba(20, 90, 50, 0.6);
+}
+
+/* Animations */
+@-webkit-keyframes fade-in-hover {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in-hover {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes float-hover {
+  0% {
+    -webkit-transform: rotateZ(0deg) scaleX(1) scaleY(1);
+    transform: rotateZ(0deg) scaleX(1) scaleY(1);
+  }
+  50% {
+    -webkit-transform: rotateZ(180deg) scaleX(0.96) scaleY(0.99);
+    transform: rotateZ(180deg) scaleX(0.96) scaleY(0.99);
+  }
+  100% {
+    -webkit-transform: rotateZ(360deg) scaleX(1) scaleY(1);
+    transform: rotateZ(360deg) scaleX(1) scaleY(1);
+  }
+}
+
+@keyframes float-hover {
+  0% {
+    -webkit-transform: rotateZ(0deg) scaleX(1) scaleY(1);
+    transform: rotateZ(0deg) scaleX(1) scaleY(1);
+  }
+  50% {
+    -webkit-transform: rotateZ(180deg) scaleX(0.96) scaleY(0.99);
+    transform: rotateZ(180deg) scaleX(0.96) scaleY(0.99);
+  }
+  100% {
+    -webkit-transform: rotateZ(360deg) scaleX(1) scaleY(1);
+    transform: rotateZ(360deg) scaleX(1) scaleY(1);
+  }
+}
+
+@-webkit-keyframes shadow-hover {
+  0% {
+    -webkit-box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.75);
+    box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.75);
+  }
+  100% {
+    -webkit-box-shadow: 0px 0px 50px 1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 50px 1px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 50px 1px rgba(0, 0, 0, 0.75);
+  }
+}
+
+@keyframes shadow-hover {
+  0% {
+    -webkit-box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.75);
+    box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.75);
+  }
+  100% {
+    -webkit-box-shadow: 0px 0px 50px 1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 50px 1px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 50px 1px rgba(0, 0, 0, 0.75);
+  }
+}
+
+@-webkit-keyframes profile-shadow {
+  0% {
+    -webkit-box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.75);
+    box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.75);
+  }
+  100% {
+    -webkit-box-shadow: 0px 0px 50px 1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 50px 1px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 50px 1px rgba(0, 0, 0, 0.75);
+  }
+}
+
+@keyframes profile-shadow {
+  0% {
+    -webkit-box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.75);
+    box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.75);
+  }
+  100% {
+    -webkit-box-shadow: 0px 0px 50px 1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 50px 1px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 50px 1px rgba(0, 0, 0, 0.75);
+  }
+}
