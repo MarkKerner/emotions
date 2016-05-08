@@ -1,4 +1,4 @@
-import {Component, View} from 'angular2/core';
+import {Component} from 'angular2/core';
 import {CORE_DIRECTIVES} from 'angular2/common';
 import {Http, Headers} from 'angular2/http';
 import {AuthHttp} from 'angular2-jwt';
