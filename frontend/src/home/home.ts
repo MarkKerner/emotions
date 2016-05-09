@@ -11,7 +11,12 @@ let template = require('./home.html');
 
 
 @RouteConfig([
-  {path: '/profile', component: Profile, name: 'Profile', useAsDefault: true}
+  {
+    path: '/profile',
+    component: Profile,
+    name: 'Profile',
+    useAsDefault: true
+  }
 ])
 
 @Component({

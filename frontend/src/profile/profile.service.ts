@@ -34,12 +34,18 @@ var EMOTIONS:Emotion[] = [
   {"id": 3, "name": "Sadness"},
   {"id": 4, "name": "Satisfaction"},
   {"id": 5, "name": "Anger"}
-]
+];
 
 @Injectable()
 export class ProfileService {
 
   getActiveEmotions() {
     return Promise.resolve(EMOTIONS);
+  }
+
+  getEmotion(id:number) {
+    return Promise.resolve(EMOTIONS).then(
+      emotions => emotions.filter(emotion => emotion.id === id) [0]
+    );
   }
 }

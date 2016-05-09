@@ -1,31 +1,38 @@
 #bg {
-  background: #F8F9F9 url(../../resources/bg_dripping.jpg);
+  position: fixed;
   height: 100%;
   width: 100%;
-  position: fixed;
+  background: #F8F9F9 url(../../resources/bg_dripping.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 
-button#logout {
+#logout {
   cursor: pointer;
   position: fixed;
-  top: 1%;
-  right: 1%;
-  text-align: center;
-  font-family: 'Lato', sans-serif;
-  font-size: 15pt;
-  background: #1A5276;
-  color: #fff;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
-  border-radius: 5px;
+
   width: 5em;
-  height: 2em;
+  height: 3em;
+
+  top: 2%;
+  right: 1%;
+
+  text-align: center;
+  font-family: sans-serif;
+  font-weight: 200;
+  font-size: 15pt;
+  color: #fff;
+
+  background: #0032ff;
+
+  border-radius: 0.5em;
+
   border: none;
   outline: none;
 }
+
+
+
+
 

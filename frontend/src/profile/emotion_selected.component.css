@@ -1,0 +1,77 @@
+#emotion-selected-container {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.selected-emotion-hoja {
+  position: fixed;
+  top: 50%;
+  width: 40em;
+  height: 40em;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.95);
+  -webkit-box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.75);
+  box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.75);
+  transform: translate(-50%, -50%);
+}
+
+.selected-emotion-hoja#public {
+  left: 29%;
+}
+
+.selected-emotion-hoja#private {
+  left: 71%;
+}
+
+#private h1, #public h1 {
+  position: relative;
+  top: 10%;
+  text-align: center;
+  font-family: 'Great Vibes', sans-serif;
+  font-size: 3em;
+  color: #000;
+}
+
+#selected-emotion-name {
+  position: absolute;
+
+  top: 15%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  text-align: center;
+  font-family: 'Great Vibes', sans-serif;
+  font-weight: lighter;
+  font-size: 40pt;
+  color: #fff;
+}
+
+#btn-close {
+  cursor: pointer;
+  position: absolute;
+
+  width: 5em;
+  height: 5em;
+
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  text-align: center;
+  font-family: sans-serif;
+  font-weight: lighter;
+  font-size: 15pt;
+  color: #fff;
+
+  background: #0032ff;
+
+  border-radius: 50%;
+
+  border: none;
+  outline: none;
+}
+

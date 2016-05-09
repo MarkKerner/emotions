@@ -8,28 +8,10 @@
        [class.fourth-emotion]="emotion.id === 4"
        [class.fifth-emotion]="emotion.id === 5"
        class="emotion-container"
-       id="{{emotion.name | lowercase}}">
+       id="{{emotion.name | lowercase}}"
+       (click)="selectEmotion(emotion)">
     <div class="hoja"></div>
     <div class="emotion-name">{{emotion.name | lowercase}}</div>
   </div>
 </div>
-
-<!--	<h2>My Heroes</h2>
-<ul class="heroes">
-  <li *ngFor="#hero of heroes"
-      [class.selected]="hero === selectedHero"
-      (click)="onSelect(hero)">
-    <span class="badge">{{hero.id}}</span> {{hero.name}}
-  </li>
-</ul>
-<div *ngIf="selectedHero">
-  <h2>
-    {{selectedHero.name | uppercase}} is my hero
-  </h2>
-  <button (click)="gotoDetail()">View Details</button>
-</div>-->
-
-<div *ngIf="selectedEmotion" id="emotion-selected-container">
-  <div class="selected-emotion-hoja" id="public"></div>
-  <div class="selected-emotion-hoja" id="private"></div>
-</div>
+<emotion-selected (closeRequest)="closeEmotion()" [emotion]="selectedEmotion"></emotion-selected>

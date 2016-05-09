@@ -1,32 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400|Great+Vibes|Lato:300|Gentium+Book+Basic);
-
-#emotion-selected-container {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-}
-
-.selected-emotion-hoja {
-  position: fixed;
-  top: 50%;
-  width: 40em;
-  height: 40em;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.8);
-  -webkit-box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.75);
-  box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.75);
-  transform: translate(-50%, -50%);
-
-}
-
-.selected-emotion-container#private {
-  left: 30%;
-}
-
-.selected-emotion-container#public {
-  left: 70%;
-}
+@import url(http://fonts.googleapis.com/css?family=Great+Vibes);
 
 #profile-container {
   position: fixed;
@@ -82,7 +54,7 @@
 .emotion-name {
   position: absolute;
 
-  color: #777;
+  color: #888;
   font-size: 2.5em;
   font-family: 'Great Vibes', sans-serif;
 
@@ -110,7 +82,7 @@
   width: 100%;
   height: 100%;
 
-  background: rgba(255, 255, 255, 0.97);
+  background: rgba(255, 255, 255, 0.9);
 
   -webkit-box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.75);

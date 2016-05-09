@@ -1,0 +1,11 @@
+<div *ngIf="emotion" id="emotion-selected-container">
+
+  <span id="selected-emotion-name">{{emotion.name}}</span>
+  <div class="selected-emotion-hoja" id="public">
+    <h1>public</h1>
+  </div>
+  <div class="selected-emotion-hoja" id="private">
+    <h1>private</h1>
+  </div>
+  <button (click)="close()" id="btn-close">Close</button>
+</div>
